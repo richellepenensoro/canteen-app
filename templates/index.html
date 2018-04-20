@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/one-page-wonder.min.css" rel="stylesheet">
+  <link href="css/login-modal.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/login-reset.css"> <!-- CSS reset -->
+  <link rel="stylesheet" href="css/login-style.css"> <!-- Resource style -->
+  <link rel="stylesheet" href="css/demo.css"> <!-- Demo style -->
+
+  <title>UP Canteen</title>
+</head>
+<body>
+  <div class="cd-main-header">
+    <nav class="cd-main-nav js-main-nav">
+      <div class="container" id="navbarResponsive">
+
+        <ul class="cd-main-nav__list js-signin-modal-trigger">
+          <!-- inser more links here -->
+          <li class="cd-main-nav__item1">University of the Philippines Cebu - Canteen</li>
+          <li><a class="cd-main-nav__item cd-main-nav__item--signin" href="#0" data-signin="login">Log in</a></li>
+          <li><a class="cd-main-nav__item cd-main-nav__item--signup" href="#0" data-signin="signup">Create Account</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <div class="cd-signin-modal js-signin-modal"> <!-- this is the entire modal form, including the background -->
+    <div class="cd-signin-modal__container"> <!-- this is the container wrapper -->
+      <ul class="cd-signin-modal__switcher js-signin-modal-switcher js-signin-modal-trigger">
+        <li><a href="#" data-signin="login" data-type="login">Log in</a></li>
+        <li><a href="#" data-signin="signup" data-type="signup">Create New Account</a></li>
+      </ul>
+
+      <div class="cd-signin-modal__block js-signin-modal-block" data-type="login"> <!-- log in form -->
+        <form class="cd-signin-modal__form">
+          <p class="cd-signin-modal__fieldset">
+            <label class="cd-signin-modal__label cd-signin-modal__label--email cd-signin-modal__label--image-replace" for="signin-email">E-mail</label>
+            <input class="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signin-email" type="email" placeholder="E-mail">
+            <span class="cd-signin-modal__error">Error message here!</span>
+          </p>
+
+          <p class="cd-signin-modal__fieldset">
+            <label class="cd-signin-modal__label cd-signin-modal__label--password cd-signin-modal__label--image-replace" for="signin-password">Password</label>
+            <input class="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signin-password" type="text"  placeholder="Password">
+            <a href="#0" class="cd-signin-modal__hide-password js-hide-password">Hide</a>
+            <span class="cd-signin-modal__error">Error message here!</span>
+          </p>
+
+          <p class="cd-signin-modal__fieldset">
+            <input type="radio" id="seller" checked class="cd-signin-modal__input " name="seller-customer" data-value="true">
+            <label for="seller">Seller</label>
+          </p>
+
+          <p class="cd-signin-modal__fieldset">
+            <input type="radio" id="customer" checked class="cd-signin-modal__input " name="seller-customer" data-value="false">
+            <label for="customer">Customer</label>
+          </p>
+
+          <p class="cd-signin-modal__fieldset">
+            <input class="cd-signin-modal__input cd-signin-modal__input--full-width" type="submit" value="Login">
+          </p>
+        </form>
+
+        <p class="cd-signin-modal__bottom-message js-signin-modal-trigger"><a href="#0" data-signin="reset">Forgot your password?</a></p>
+      </div> <!-- cd-signin-modal__block -->
+
+      <div class="cd-signin-modal__block js-signin-modal-block" data-type="signup"> <!-- sign up form -->
+        <form class="cd-signin-modal__form" method="post" action="/signup">
+          <p class="cd-signin-modal__fieldset">
+            <label class="cd-signin-modal__label cd-signin-modal__label--username cd-signin-modal__label--image-replace" for="signup-username">Name</label>
+            <input class="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" name="Sname" type="text" placeholder="Name">
+            <span class="cd-signin-modal__error">Error message here!</span>
+          </p>
+
+          <p class="cd-signin-modal__fieldset">
+            <label class="cd-signin-modal__label cd-signin-modal__label--username cd-signin-modal__label--image-replace" for="signup-username">Username</label>
+            <input class="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" name="Susername" type="text" placeholder="Username">
+            <span class="cd-signin-modal__error">Error message here!</span>
+          </p>
+
+          <p class="cd-signin-modal__fieldset">
+            <label class="cd-signin-modal__label cd-signin-modal__label--email cd-signin-modal__label--image-replace" for="signup-email">E-mail</label>
+            <input class="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" name="Smail" type="email" placeholder="E-mail">
+            <span class="cd-signin-modal__error">Error message here!</span>
+          </p>
+
+          <p class="cd-signin-modal__fieldset">
+            <label class="cd-signin-modal__label cd-signin-modal__label--password cd-signin-modal__label--image-replace" for="signup-password">Password</label>
+            <input class="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" name="Spassword" type="text"  placeholder="Password">
+            <a href="#0" class="cd-signin-modal__hide-password js-hide-password">Hide</a>
+            <span class="cd-signin-modal__error">Error message here!</span>
+          </p>
+
+          <p class="cd-signin-modal__fieldset">
+            <input type="checkbox" name="usertype" class="cd-signin-modal__input " value = "Seller">
+            <label for="accept-terms">I agree to the <a href="#0">Terms of the Sequence </a></label>
+          </p>
+
+          <p class="cd-signin-modal__fieldset">
+            <input class="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding" type="submit" value="Create account">
+          </p>
+        </form>
+      </div> <!-- cd-signin-modal__block -->
+
+      <div class="cd-signin-modal__block js-signin-modal-block" data-type="reset"> <!-- reset password form -->
+        <p class="cd-signin-modal__message">Lost your password? Please enter your email address. You will receive a link to create a new password.</p>
+
+        <form class="cd-signin-modal__form" method="get" action="/">
+          <p class="cd-signin-modal__fieldset">
+            <label class="cd-signin-modal__label cd-signin-modal__label--email cd-signin-modal__label--image-replace" for="reset-email">E-mail</label>
+            <input class="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="reset-email" type="email" placeholder="E-mail">
+            <span class="cd-signin-modal__error">Error message here!</span>
+          </p>
+
+          <p class="cd-signin-modal__fieldset">
+            <input class="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding" type="submit" value="Reset password">
+          </p>
+        </form>
+
+        <p class="cd-signin-modal__bottom-message js-signin-modal-trigger"><a href="#0" data-signin="login">Back to log-in</a></p>
+      </div> <!-- cd-signin-modal__block -->
+      <a href="#0" class="cd-signin-modal__close js-close">Close</a>
+    </div> <!-- cd-signin-modal__container -->
+  </div> <!-- cd-signin-modal -->
+
+ <header class="masthead text-center text-white">
+      <div class="masthead-content">
+        <div class="container">
+          <!--<h1 class="masthead-heading mb-0">WELCOME</h1>
+          <h2 class="masthead-subheading mb-0">PASOK MGA SUKI PRESYONG DIBISORYA, SAMPU-SAMPU, BENTE, TRENTA AT IBA PA!</h2>-->
+        </div>
+      </div>
+      <!--
+        <div class="bg-circle-1 bg-circle"></div>
+        <div class="bg-circle-2 bg-circle"></div>
+        <div class="bg-circle-3 bg-circle"></div>
+        <div class="bg-circle-4 bg-circle"></div>
+        -->
+    </header>
+
+
+   <section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-lg-2">
+            <div class="p-5">
+              <img class="img-fluid rounded-circle" src="img/1.jpg" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <div class="p-5">
+              <h2 class="display-4">SUD-AN XD</h2>
+              <p>PASOK MGA SUKI PRESYONG DIBISORYA, SAMPU-SAMPU, BENTE, TRENTA AT IBA PA!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="p-5">
+              <img class="img-fluid rounded-circle" src="img/2.jpg" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="p-5">
+              <h2 class="display-4">SCHOOL SUPPLIES</h2>
+              <p>PASOK MGA SUKI PRESYONG DIBISORYA, SAMPU-SAMPU, BENTE, TRENTA AT IBA PA! </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-lg-2">
+            <div class="p-5">
+              <img class="img-fluid rounded-circle" src="img/4.jpg" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <div class="p-5">
+              <h2 class="display-4">SNACKIES XD</h2>
+              <p>PASOK MGA SUKI PRESYONG DIBISORYA, SAMPU-SAMPU, BENTE, TRENTA AT IBA PA!.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+ <!--true/false for seller and customer-->
+ <script type="text/javascript">
+     $(".radio").click(function () {
+                alert($("input:radio[name='seller-customer']:checked").attr("data-value"));
+            });
+  </script>
+<script src="js/placeholders.min.js"></script> <!-- polyfill for the HTML5 placeholder attribute -->
+<script src="js/main.js"></script> <!-- Resource JavaScript -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+<!-- Footer -->
+    <footer>
+      <div class="container">
+        <p class="m-0 text-center text-white small">Copyright &copy; MGA MONGGOL 2018</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+</html>

@@ -1,0 +1,24 @@
+{
+  "name": "cantapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "keywords": [
+    "canteen",
+    "app",
+    "cantapp"
+  ],
+  "author": "kevin, deither, aera, maureen, jessa, richelle",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "consolidate": "^0.15.1",
+    "express": "^4.16.3",
+    "morgan": "^1.9.0",
+    "nunjucks": "^3.1.2",
+    "pg": "^7.4.1"
+  }
+}
